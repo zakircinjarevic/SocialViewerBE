@@ -140,7 +140,7 @@ const getFiles = (req, res) => {
 const download = (req, res) => {
   console.log(req.body);
   fs.writeFile(
-    "post-" + req.body.post.postid + ".txt",
+    "post-" + req.body.post.postid + ".json",
     JSON.stringify(req.body),
     function(err) {
       if (err) {
